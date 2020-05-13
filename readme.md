@@ -2,6 +2,9 @@
 
 Wrapper of api push huawei for sending notification push using python.
 
+## Install
+```pip install pyhcm```
+
 ## Example
 
 ### Subcribers topic
