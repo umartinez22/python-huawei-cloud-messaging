@@ -44,4 +44,5 @@ class HCMNotification:
                      "Authorization": f'Bearer {self.get_access_token()}'}
         )
         response = json.loads(urlopen(request).read())
+        
         return response['msg'] == 'Success'
