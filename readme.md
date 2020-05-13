@@ -1,6 +1,6 @@
-# Python Huawei Cloud Messaging Server
+# Python Huawei Cloud Messaging
 
-Wrapper api push huawei for sending notification push using python.
+Wrapper of api push huawei for sending notification push using python.
 
 ## Example
 
@@ -9,5 +9,5 @@ Wrapper api push huawei for sending notification push using python.
 CLIENT_ID = "00000000"
 CLIENT_SECRET = "0000000000000000000000000000000000000000000000000000000000000000"
 
-HCMNotification(CLIENT_ID, CLIENT_SECRET).notify_topic_subscribers('test_notification', 'test', 'test')
+HCMNotification(CLIENT_ID, CLIENT_SECRET).notify_topic_subscribers('test_topic', 'test title', 'test body')
 ```

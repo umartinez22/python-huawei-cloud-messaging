@@ -19,15 +19,12 @@ class HCMNotification:
                             "client_secret": self.client_secret}).encode(),
             headers={"Content-type": "application/x-www-form-urlencoded"}
         )
-
         return json.loads(urlopen(request).read())['access_token']
 
     def notify_topic_subscribers(self, topic: str, title: str, message_body: str):
         payload = {
-            'validate_only': True,
             'message': {
                 'topic': topic,
-                'token': [],
                 'android': {
                     'notification': {
                         'title': title,
@@ -46,6 +43,5 @@ class HCMNotification:
             headers={"Content-type": "application/json",
                      "Authorization": f'Bearer {self.get_access_token()}'}
         )
-
-        return json.loads(urlopen(request).read())['msg'] == 'Success'
-
+        response = json.loads(urlopen(request).read())
+        return response['msg'] == 'Success'
