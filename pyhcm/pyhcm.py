@@ -21,10 +21,12 @@ class HCMNotification:
         )
         return json.loads(urlopen(request).read())['access_token']
 
-    def notify_topic_subscribers(self, topic: str, title: str, message_body: str):
-        payload = {
+    def _build_notification_payload(
+            self, topic: str, token: str, title: str, message_body: str):
+        return {
             'message': {
                 'topic': topic,
+                'token': [token] if token is not None else None,
                 'android': {
                     'notification': {
                         'title': title,
@@ -37,6 +39,7 @@ class HCMNotification:
             }
         }
 
+    def _send_notification_request(self, payload: object):
         request = Request(
             self.url_push,
             data=json.dumps(payload).encode(),
@@ -44,4 +47,15 @@ class HCMNotification:
                      "Authorization": f'Bearer {self.get_access_token()}'}
         )
         response = json.loads(urlopen(request).read())
-        return response['msg'] == 'Success'
+        return response['msg'].lower() == 'success'
+
+    def notify_topic_subscribers(
+            self, topic: str, title: str, message_body: str):
+        payload = self._build_notification_payload(
+            topic, None, title, message_body)
+        return self._send_notification_request(payload)
+
+    def notify_single_device(self, token: str, title: str, message_body: str):
+        payload = self._build_notification_payload(
+            None, token, title, message_body)
+        return self._send_notification_request(payload)
