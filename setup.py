@@ -1,6 +1,6 @@
 from distutils.core import setup
 
-version = '1.0.5'
+version = '1.0.6'
 
 setup(
     name='pyhcm',
@@ -14,7 +14,7 @@ setup(
     keywords=['Huawei', 'cloud', 'messaging', 'notification'],
     install_requires=[],
     classifiers=[
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 1 - Beta',
         'Intended Audience :: Developers',
         'Topic :: Software Development :: Build Tools',
         'License :: OSI Approved :: MIT License',
