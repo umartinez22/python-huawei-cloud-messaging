@@ -1,12 +1,21 @@
 from distutils.core import setup
+from os import path
 
-version = '1.0.6.1'
+version = '1.0.6.2'
+long_description = ''
+
+current_directory = path.abspath(path.dirname(__file__))
+
+with open(path.join(current_directory, 'README.md'), encoding='utf-8') as file:
+    long_description = file.read()
 
 setup(
     name='pyhcm',
     packages=['pyhcm'],
     version=f'{version}', license='MIT',
-    description='Wrapper of api push huawei for sending notification push using python.',
+    description='Wrapper of huawei cloud messaging (Push Kit) for sending push notification using python.',
+    long_description=long_description,
+    long_description_content_type='text/markdown',
     author='Ulises Martinez Adon',
     author_email='umartinezadon@outlook.com',
     url='https://github.com/umartinez22',

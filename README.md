@@ -1,6 +1,10 @@
 # Python Huawei Cloud Messaging
 
-Wrapper of huawei cloud notification API for sending push notification using python.
+Wrapper of huawei cloud messaging [(Push Kit)](https://developer.huawei.com/consumer/en/hms/huawei-pushkit/) for sending push notification using python.
+
+## Home page
+
+https://pypi.org/project/pyhcm/
 
 ## Install
 ```pip install pyhcm```
