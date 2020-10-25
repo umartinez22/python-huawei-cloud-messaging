@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: pyhcm
+Version: 1.0.6.3
+Summary: Wrapper of huawei cloud messaging (Push Kit) for sending push notification using python.
+Home-page: https://github.com/umartinez22
+Author: Ulises Martinez Adon
+Author-email: umartinezadon@outlook.com
+License: MIT
+Download-URL: https://github.com/umartinez22/python-huawei-cloud-messaging/archive/v_1.0.6.3.tar.gz
+Description: # Python Huawei Cloud Messaging
+        
+        Wrapper of huawei cloud messaging [(Push Kit)](https://developer.huawei.com/consumer/en/hms/huawei-pushkit/) for sending push notification using python.
+        
+        ## Home page
+        
+        https://pypi.org/project/pyhcm/
+        
+        ## Install
+        ```pip install pyhcm```
+        
+        ## Example
+        
+        ### Send notification to topic
+        ```
+        CLIENT_ID = "00000000"
+        CLIENT_SECRET = "0000000000000000000000000000000000000000000000000000000000000000"
+        
+        HCMNotification(CLIENT_ID, CLIENT_SECRET).notify_topic_subscribers('test_topic', 'test title', 'test body')
+        ```
+        
+        ### Send notification to user
+        
+        ```
+        CLIENT_ID = "00000000"
+        CLIENT_SECRET = "0000000000000000000000000000000000000000000000000000000000000000"
+        
+        HCMNotification(CLIENT_ID, CLIENT_SECRET).notify_single_device('token_xyz', 'test title', 'test body')
+        ```
+Keywords: Huawei,cloud,messaging,notification
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Description-Content-Type: text/markdown

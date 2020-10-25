@@ -1,7 +1,7 @@
-from distutils.core import setup
+from setuptools import setup
 from os import path
 
-version = '1.0.6.2'
+version = '1.0.6.3'
 long_description = ''
 
 current_directory = path.abspath(path.dirname(__file__))
