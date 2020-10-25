@@ -14,7 +14,7 @@ setup(
     keywords=['Huawei', 'cloud', 'messaging', 'notification'],
     install_requires=[],
     classifiers=[
-        'Development Status :: 1 - Beta',
+        'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
         'Topic :: Software Development :: Build Tools',
         'License :: OSI Approved :: MIT License',
