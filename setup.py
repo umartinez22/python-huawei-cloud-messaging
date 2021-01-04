@@ -1,12 +1,12 @@
 from setuptools import setup
 from os import path
 
-version = '1.0.6.3'
+version = '1.0.6.4'
 long_description = ''
 
 current_directory = path.abspath(path.dirname(__file__))
 
-with open(path.join(current_directory, 'README.md'), encoding='utf-8') as file:
+with open(path.join(current_directory, 'README'), encoding='utf-8') as file:
     long_description = file.read()
 
 setup(
